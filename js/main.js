@@ -102,9 +102,8 @@ function tinhGiaiThua() {
 // BÀi 6: Tạo thẻ Div
 
 function taoThe() {
-  for (var x = "", n = 0, i = 1; i <= 10; i++) {
-    n = i % 2;
-    if (n == 0) {
+  for (var x = "", i = 1; i <= 10; i++) {
+    if (i%2 == 0) {
       x += "<div class='bg-danger text-white p-2'>Div chẵn</div>";
     } else {
       x += "<div class='bg-primary text-white  p-2'>Div lẻ </div>";
