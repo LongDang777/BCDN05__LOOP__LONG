@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h4 class=" mt-5"> BÀi 1: Tìm số chẵn/lẻ nhỏ hơn 100 </h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+        <h6 class=" mt-5"> Vòng lặp FOR </h6>
+            
+            <div class="col-12">
+                <button id="timChanLe1" class="btn btn-primary me-1 mb-1" type="button">Xem kết quả</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="ketQua1"></span>
+            </div>
+        <h6 class=" mt-5"> Vòng lặp WHILE </h6>
+
+            <div class="col-12">
+                <button id="timChanLe2" class="btn btn-primary me-1 mb-1" type="button">Xem kết quả</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="ketQua2"></span>
+            </div>
+        </form>
+
+        <h4 class=" mt-5"> BÀi 2:  Đếm số chia hết cho 3</h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+        <h6 class=" mt-5"> Vòng lặp FOR </h6>
+            
+            <div class="col-12">
+                <button id="demSoChia3" class="btn btn-primary me-1 mb-1" type="button">Xem kết quả</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="result21"></span>
+            </div>
+        <h6 class=" mt-5"> Vòng lặp WHILE </h6>
+
+            <div class="col-12">
+                <button id="demSoChia31" class="btn btn-primary me-1 mb-1" type="button">Xem kết quả</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="result22"></span>
+            </div>
+        </form>
+
+        <h4 class=" mt-5"> BÀi 3: Tìm số nguyên dương nhỏ nhất </h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+                      
+            <div class="col-12">
+                <button onclick="timSoNguyenNN()" class="btn btn-primary me-1 mb-1" type="button">Xem kết quả</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="ketQua3"></span>
+            </div>
+        </form>
+
+
+        <h4 class=" mt-5"> BÀi 4: Tính Tổng </h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+
+            <div class="col-12 col-lg-4">
+                <input type="number" class="form-control form-input" id="inpX" placeholder="Nhập số x">
+            </div>
+            
+            <div class="col-12 col-lg-4">
+                <input type="number" class="form-control form-input" id="inpN" placeholder="Nhập số n">
+            </div>
+                      
+            <div class="col-12">
+                <button onclick="tinhTong()" class="btn btn-primary me-1 mb-1" type="button" id="btnTinh">Tính Tổng</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="txtTong"></span>
+            </div>
+        </form>
+
+
+        <h4 class=" mt-5"> BÀi 5: Tính Giai Thừa </h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+
+            <div class="col-12 col-lg-4">
+                <input type="number" class="form-control form-input" id="inpSo" placeholder="Nhập số x">
+            </div>
+                                  
+            <div class="col-12">
+                <button onclick="tinhGiaiThua()" class="btn btn-primary me-1 mb-1" type="button" >Tính Giai Thừa</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="txtGiaiThua"></span>
+            </div>
+        </form>
+
+
+        <h4 class=" mt-5"> BÀi 6: Tạo thẻ Div </h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+                                  
+            <div class="col-12">
+                <button onclick="taoThe()" class="btn btn-primary me-1 mb-1" type="button">Tạo thẻ</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="txtTaoThe"></span>
+            </div>
+        </form>
+
+
+        <h4 class=" mt-5"> BÀi 7: In số nguyên tố</h4>
+        <form class="row gy-3 align-items-center px-2 mt-4">
+
+            <div class="col-12 col-lg-4">
+                <input type="number" class="form-control form-input" id="inpNumber" placeholder="Nhập số n">
+            </div>
+                                  
+            <div class="col-12">
+                <button onclick="printNum()" class="btn btn-primary me-1 mb-1" type="button">In các số nguyên tố</button>
+            </div>
+
+            <div class="alert alert-success" role="alert">
+                👉<span id="txtNum"></span>
+            </div>
+        </form>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
+
