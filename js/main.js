@@ -13,6 +13,7 @@ document.getElementById("timChanLe1").onclick = function () {
     " Số chẵn: " + chan + "<br>" + "👉 Số lẻ: " + le;
 };
 
+
 // vòng lặp While
 document.getElementById("timChanLe2").onclick = function () {
   var count = 0;
@@ -34,18 +35,18 @@ document.getElementById("timChanLe2").onclick = function () {
 // BÀi 2:  Đếm số chia hết cho 3
 
 // vòng lặp for
-document.getElementById("demSoChia3").onclick = function () {
+document.getElementById('demSoChia3').onclick = function(){
   var count = 0;
-  for (var i = 0; i <= 1000; i++) {
-    if (i % 3 == 0) {
-      count++;
+  for(var i=0; i <= 1000; i++){
+    if(i%3 == 0){
+      count ++;
     }
   }
-  document.getElementById("result21").innerHTML =
-    " Số chia hết cho 3 nhỏ hơn 1000: " + count + " số";
-};
+  document.getElementById('result21').innerHTML = ' Số chia hết cho 3 nhỏ hơn 1000: '+count+' số'
+}
 
 // vòng lặp While
+
 document.getElementById("demSoChia31").onclick = function () {
   var count = 0,
     i = 0;
@@ -80,9 +81,9 @@ function tinhTong() {
       i = 1;
     i <= n;
     i++
-  )
-    s += Math.pow(x, i);
-
+  ) {
+    s = s + Math.pow(x, i);
+  }
   document.getElementById("txtTong").innerHTML = "Tổng :" + s;
 }
 
@@ -101,7 +102,7 @@ function tinhGiaiThua() {
 // BÀi 6: Tạo thẻ Div
 
 function taoThe() {
-  for (var x = "", n = 0, i = 0; i <= 10; i++) {
+  for (var x = "", n = 0, i = 1; i <= 10; i++) {
     n = i % 2;
     if (n == 0) {
       x += "<div class='bg-danger text-white p-2'>Div chẵn</div>";
